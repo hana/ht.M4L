@@ -19,16 +19,7 @@ on run argv
   if application app_name is running
     tell application app_name
       activate
-      tell application "System Events"
-        if save_required as number = 1
-          keystroke "q" using command down
-          keystroke return
-        else
-          keystroke "q" using command down
-          keystroke tab
-          keystroke return
-        end if
-      end tell
+      quit
     end tell
   else
     log app_name & " is not running"
